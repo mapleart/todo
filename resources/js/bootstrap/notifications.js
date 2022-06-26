@@ -1,3 +1,5 @@
+import Vue from "vue";
+
 /**
  * Обертка для уведомлений
  * @type {{init(), success(*=, *=, *=): void, show(*=, *=, *=, *=): (undefined|{duration: number, icon: boolean, title: *|string, message: *|string, type: *}), error(*=, *=, *=): void, notice(*=, *=, *=): void, info(*=, *=, *=): void}}
@@ -15,44 +17,38 @@ export const Notifications = {
             return;
         }
 
-        this.$buefy.notification.open('Clicked!!')
-
-        return {
-            title: title ? title : '', // <- required
-            message: message ? message : '', // <- required
-            icon: false, // <- unrequired, default true,
-            duration: 4000, // <- unrequired, default 5000 miliseconds
+        Vue.prototype.$buefy.notification.open({
+            message: message,
             type: type,
-            ...params
-        }
-
+            pauseOnHover: true,
+        })
     },
 
     /**
      * Отображение информационного сообщения
      */
     notice( title, message, params ) {
-        this.show(title, message, 'success', params)
+        this.show(title, message, 'is-success', params)
     },
 
     /**
      * Отображение сообщения об успехе
      */
     success( title, message, params ) {
-        this.show(title, message, 'success', params)
+        this.show(title, message, 'is-success', params)
     },
 
     /**
      * Отображение сообщения об ошибке
      */
     error( title, message, params ) {
-        this.show(title, message, 'error', params)
+        this.show(title, message, 'is-danger', params)
     },
 
     /**
      * Отображение информационного сообщения
      */
     info( title, message, params ) {
-        this.show(title, message, 'info', params)
+        this.show(title, message, 'is-primary', params)
     }
 };

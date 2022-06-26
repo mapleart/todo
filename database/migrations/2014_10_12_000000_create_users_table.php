@@ -18,8 +18,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('surname', 20)->nullable();
             $table->string('middle_name', 20)->nullable();
+            $table->string('role', 20)->default('staff'); //staff, head,
             $table->string('login', 20)->unique();
-            $table->bigInteger('parent_id')->nullable();
+            $table->bigInteger('parent_id')->default(0);
             $table->string('avatar', 250)->nullable();
             $table->string('password');
             $table->boolean('is_admin')->default(0);

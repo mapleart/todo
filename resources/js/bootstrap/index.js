@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-import './vee-validate'
+import './validate'
 
 import VueResource from 'vue-resource';
 Vue.use(VueResource);

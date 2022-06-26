@@ -15,6 +15,8 @@ Vue.prototype.$token = document.querySelector('meta[name="csrf-token"]').getAttr
 import App from './App.vue'
 import router from  './router'
 
+console.log(router);
+
 // Подключаем вспомогательные библиотеки
 require('./bootstrap');
 
@@ -25,29 +27,32 @@ Vue.use(VueMeta, {
     refreshOnceOnNavigation: true,
 })
 
-new Vue({
-    el: '#app',
-    router,
-    render(h){
-        return h(
-            App
-        )
-    },
-    created() {
-        this.checkSize();
-        window.addEventListener('resize', ()=>{
+if(document.getElementById('app')) {
+    new Vue({
+        el: '#app',
+        router,
+        data: {
+            isMobile: false
+        },
+        render(h){
+            return h(
+                App
+            )
+        },
+        created() {
             this.checkSize();
-        });
-    },
+            window.addEventListener('resize', ()=>{
+                this.checkSize();
+            });
+        },
 
-    methods: {
-        checkSize(){
-            let w = document.documentElement.clientWidth,
-                isMobile = w < 992;
+        methods: {
+            checkSize(){
+                let w = document.documentElement.clientWidth;
+                this.isMobile = w < 992;
 
-            if(this.$store.getters.getIsMobile != isMobile) {
-                this.$store.commit('setIsMobile', isMobile)
             }
         }
-    }
-})
+    })
+}
+

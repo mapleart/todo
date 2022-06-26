@@ -2,7 +2,7 @@ import Vue from 'vue';
 
 import NProgress from 'nprogress/nprogress';
 NProgress.configure({ showSpinner: false });
-import { Notifications } from '../plugins/notifications'
+import { Notifications } from './notifications'
 
 export const AjaxPlugin = {
 

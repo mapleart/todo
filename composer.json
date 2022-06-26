@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "ToDoList",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Simple Todo list Laravel+VueJS",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {

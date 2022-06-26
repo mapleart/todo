@@ -1,0 +1,102 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Цветовая схема
+$primary: #0672CC;
+$primary-light: findLightColor($primary);
+$primary-dark: findDarkColor($primary);
+$primary-invert: findColorInvert($primary);
+
+$success: #44D28B;
+$success-light: findLightColor($success);
+$success-dark: findDarkColor($success);
+$success-invert: findColorInvert($success);
+
+$light: #D0D7DE;
+
+// Инпуты
+$input-color: #000;
+$input-background-color: #F6F6F6;
+$input-border-color: #F6F6F6;
+$input-radius: 10px;
+$control-height: 50px;
+$input-shadow: none;
+$input-placeholder-color: #536575;
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: mergeColorMaps(
+        (
+            "white": (
+                $white,
+                $black,
+            ),
+            "black": (
+                $black,
+                $white,
+            ),
+            "light": (
+                $light,
+                $light-invert,
+            ),
+            "dark": (
+                $dark,
+                $dark-invert,
+            ),
+            "primary": (
+                $primary,
+                $primary-invert,
+                $primary-light,
+                $primary-dark,
+            ),
+            "link": (
+                $link,
+                $link-invert,
+                $link-light,
+                $link-dark,
+            ),
+            "info": (
+                $info,
+                $info-invert,
+                $info-light,
+                $info-dark,
+            ),
+            "success": (
+                $success,
+                $success-invert,
+                $success-light,
+                $success-dark,
+            ),
+            "warning": (
+                $warning,
+                $warning-invert,
+                $warning-light,
+                $warning-dark,
+            ),
+            "danger": (
+                $danger,
+                $danger-invert,
+                $danger-light,
+                $danger-dark,
+            ),
+        ),
+        $custom-colors
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+.navbar {
+    box-shadow: 4px 25px 55px rgba(237, 240, 243, 0.35)
+}
+
+.navbar-brand {
+    margin-right: 35px;
+}
+.field:not(:last-child) {
+    margin-bottom: 25px;
+}

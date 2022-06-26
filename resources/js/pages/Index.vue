@@ -1,17 +1,31 @@
 <template>
     <div>
-        <div class="profile__search">
-            <input type="text" class="profile__search__input" v-model="searchAddress" @change="changeAddress" placeholder="Wallet"></input>
+        <div class="tt tt--layout">
+            <h2 class="tt__text">Задания</h2>
+            <router-link to="/create-task" class="button is-success is-rounded">+ Задачу</router-link>
+        </div>
+
+        <div class="nv">
+            <a href="#" class="nv__link" :class="{'active': tab == 'today'}">На сегодня</a>
+            <a href="#" class="nv__link" :class="{'active': tab == 'week'}">На неделю</a>
+            <a href="#" class="nv__link" :class="{'active': tab == 'all'}">на будущее</a>
         </div>
     </div>
 </template>
 
 <script>
+import BeforePageMixin from '../mixins/before-page-mix'
+let mix = BeforePageMixin({
+    endPoint: '/vue/home'
+});
+
+
 export default {
-    name: 'DashboardPage',
+    name: 'Home',
+    mixins: [mix],
     data() {
         return {
-            searchAddress: '',
+            tab: 'today',
         }
     },
     methods: {

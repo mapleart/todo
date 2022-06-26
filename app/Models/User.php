@@ -23,6 +23,7 @@ class User extends Authenticatable
         'middle_name',
         'login',
         'password',
+        'parent_id'
     ];
 
     /**
@@ -34,4 +35,16 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public function childs() {
+        return $this->hasMany('App\Models\User','parent_id','id') ;
+    }
+
+    public function toArray()
+    {
+        $data = parent::toArray();
+        $data['avatar'] = "https://avatars.dicebear.com/api/avataaars/{$this->login}.svg";
+        $data['display_name'] = $this->name . ' ' . $this->surname;
+        return $data;
+    }
 }

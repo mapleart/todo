@@ -33,8 +33,8 @@
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    @yield('content')
-    <div id="app"></div>
+
+@yield('content')
     <!-- Scripts -->
     <script src="{{ mix('/js/app.js') }}" defer></script>
 </body>

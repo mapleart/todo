@@ -18,4 +18,24 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['register'=>false]);
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+$vuePages = ['home', 'profile',  'create-task'];
+foreach ($vuePages as $page) {
+    Route::get("/$page", [App\Http\Controllers\HomeController::class, 'index'])->name($page);
+}
+Route::get("/vue/profile", [App\Http\Controllers\HomeController::class, 'vueProfile'])->name('vueProfile');
+Route::post("/vue/save-profile", [App\Http\Controllers\HomeController::class, 'vueSaveProfile'])->name('vueSaveProfile');
+Route::get("/vue/home", [App\Http\Controllers\HomeController::class, 'vueHome'])->name('vueHome');
+Route::get("/vue/create-task", [App\Http\Controllers\HomeController::class, 'vueCreateTask'])->name('vueCreateTask');
+
+
+
+
+//
+Route::middleware(['admin'])->group(function () {
+    Route::get("/admin", [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
+    Route::get("/vue/admin/save-user-role", [App\Http\Controllers\AdminController::class, 'vueAdminSaveUserRole'])->name('vueAdminSaveUserRole');
+    Route::get("/vue/admin/save-user-head", [App\Http\Controllers\AdminController::class, 'vueAdminSaveUserHead'])->name('vueAdminSaveUserHead');
+    Route::get("/vue/admin", [App\Http\Controllers\AdminController::class, 'vueAdmin'])->name('vueAdmin');
+});
