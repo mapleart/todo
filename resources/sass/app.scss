@@ -102,3 +102,61 @@ body {
         background: rgba($primary, 0.05);
     }
 }
+
+.task-item {
+    position: relative;
+    box-shadow: 0 7px 55px 0 rgb(237 240 243 / 75%);
+    background-color: #ffffff;
+    padding: 27px 27px 30px 33px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 27px;
+        background: #9AA6B0;
+        width: 5px;
+        height: calc(100% - 50px);
+        border-radius: 0 5px 5px 0;
+    }
+
+    &__header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+
+        &__title {
+            font-size: 13px;
+            font-weight: 500;
+            color: #000000;
+            text-transform: uppercase;
+        }
+
+        &__status {
+            display: inline-flex;
+            height: 34px;
+            padding: 0 10px;
+            border-radius: 17px;
+            background: #9AA6B0;
+            color: #fff;
+            font-size: 12px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+
+    &__text {
+        padding: 20px 23px 19px 23px;
+        border-radius: 10px;
+        background-color: #f6f6f6;
+        font-size: 16px;
+        font-weight: normal;
+        color: #536575;
+        margin-bottom: 20px;
+        line-height: 18px;
+    }
+}

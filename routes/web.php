@@ -20,14 +20,19 @@ Auth::routes(['register'=>false]);
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-$vuePages = ['home', 'profile',  'create-task'];
+$vuePages = ['home', 'profile', 'staff', 'create-task'];
 foreach ($vuePages as $page) {
     Route::get("/$page", [App\Http\Controllers\HomeController::class, 'index'])->name($page);
 }
 Route::get("/vue/profile", [App\Http\Controllers\HomeController::class, 'vueProfile'])->name('vueProfile');
 Route::post("/vue/save-profile", [App\Http\Controllers\HomeController::class, 'vueSaveProfile'])->name('vueSaveProfile');
 Route::get("/vue/home", [App\Http\Controllers\HomeController::class, 'vueHome'])->name('vueHome');
+Route::get("/vue/home-staff", [App\Http\Controllers\HomeController::class, 'vueHomeStaff'])->name('vueHomeStaff');
 Route::get("/vue/create-task", [App\Http\Controllers\HomeController::class, 'vueCreateTask'])->name('vueCreateTask');
+Route::post("/vue/create-task-submit", [App\Http\Controllers\HomeController::class, 'vueCreateTaskSubmit'])->name('vueCreateTaskSubmit');
+
+Route::get("/vue/fetch-task", [App\Http\Controllers\HomeController::class, 'vueFetchTask'])->name('vueFetchTask');
+Route::get("/vue/set-task-status", [App\Http\Controllers\HomeController::class, 'vueTaskStatus'])->name('vueTaskStatus');
 
 
 

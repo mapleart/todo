@@ -5,6 +5,7 @@ Vue.use(Router)
 
 
 import Index from '../pages/Index'
+import Staff from '../pages/Staff'
 import Profile from '../pages/Profile'
 import CreateTask from '../pages/CreateTask'
 import Admin from '../admin/pages/Index'
@@ -32,6 +33,11 @@ export default new Router({
             path: '/',
             name: 'home',
             component: Index,
+        },
+        {
+            path: '/staff',
+            name: 'staff',
+            component: Staff,
         },
         {
             path: '/profile',

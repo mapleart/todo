@@ -98,11 +98,18 @@ export default {
             this.staffs = response.staffs;
         },
         hardFormatter(value){
-            let lables = ['Низкий', 'Средний', 'Высокий' ]
-            return lables[value];
+            let labs = ['Низкий', 'Средний', 'Высокий' ]
+            return labs[value];
         },
         onSubmit() {
-            this.loading = true;
+            let data = { ...this.form };
+            data.date_end = data.date_end ? data.date_end.yyyymmdd() : '';
+            // this.loading = true;
+            this.$ajax.post('/vue/create-task-submit', data).then(()=>{
+                this.$router.push('/')
+            }, ()=>{
+
+            });
         }
     }
 }

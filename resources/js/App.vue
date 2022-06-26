@@ -24,6 +24,10 @@
                         <a href="/" class="navbar-item">
                             Мои задачи
                         </a>
+
+                        <a href="/staff" class="navbar-item" v-if="$user.role =='head'">
+                            Задачи подчиненных
+                        </a>
                     </div>
 
                     <div class="navbar-end">
