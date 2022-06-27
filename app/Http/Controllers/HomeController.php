@@ -117,6 +117,64 @@ class HomeController extends Controller
             'task'=> $task
         ];
     }
+
+    /**
+     * Редактирует задачу
+     * @param Request $request
+     * @return array
+     */
+    public function vueEditTaskSubmit(Request $request){
+        if(!$task = Task::where('id', $request->get('taskId'))->first()) {
+            return [
+                'success'=>0,
+                'message'=>'Задача не найдена'
+            ];
+        }
+
+        $assignedId = Auth::user()->id;
+        // Проверяем ответвеного
+        if( Auth::user()->role == 'head') {
+            if($assignedUser = User::where('id', $request->get('assigned_id'))->first()) {
+                if($assignedUser->parent_id != Auth::user()->id) {
+                    return [
+                        'success'=>false,
+                        'message'=>'Пользователь не ваш подчиненный'
+                    ];
+                }
+
+                $assignedId = $assignedUser->id;
+            }
+        }
+
+
+
+        if($task->checkEdit()) {
+            $endDate = date('Y-m-d 23:59:59', strtotime($request->get('date_end')));
+            if($endDate < date('Y-m-d 23:59:59')) {
+                return [
+                    'success'=>false,
+                    'message'=>'Укажите дату завершении позже текущей'
+                ];
+            }
+
+            $task->assigned_id = $assignedId;
+            $task->title = $request->get('title');
+            $task->description = $request->get('description');
+            $task->priority = (int)$request->get('priority');
+            $task->date_end = $endDate;
+        }
+
+        $newStatus = $request->get('status');
+        if(in_array($newStatus, [Task::STATUS_NEW, Task::STATUS_PROCESS, Task::STATUS_SUCCESS, Task::STATUS_ERROR])) {
+            $task->status = $newStatus;
+        }
+        $task->save();
+        return [
+            'success'=>true,
+            'message'=>'Задача изменена',
+            'task'=> $task
+        ];
+    }
     /**
      * Сохранение профиля
      * @return array
@@ -178,7 +236,6 @@ class HomeController extends Controller
             case 'all':
             default:
                 $baseOrder = 'updated_at';
-
         }
 
         // Собираем фильтр по пользователям

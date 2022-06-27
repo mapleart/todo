@@ -52,14 +52,27 @@
         &__title {
             font-size: 13px;
             font-weight: 500;
-            color: #000000;
+            color: #9AA6B0;
             text-transform: uppercase;
             a {
-                color: #000000;
+                color: #9AA6B0;
                 &:hover {
                     color: $primary
                 }
             }
+
+            &--ended {
+                a {
+                    color: $success;
+                }
+            }
+            &--overed {
+                a {
+                    color: $danger;
+                }
+            }
+
+
         }
 
         &__status {

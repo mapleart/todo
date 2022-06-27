@@ -16135,14 +16135,20 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 .task-item__header__title {
   font-size: 13px;
   font-weight: 500;
-  color: #000000;
+  color: #9AA6B0;
   text-transform: uppercase;
 }
 .task-item__header__title a {
-  color: #000000;
+  color: #9AA6B0;
 }
 .task-item__header__title a:hover {
   color: #0672CC;
+}
+.task-item__header__title--ended a {
+  color: #44D28B;
+}
+.task-item__header__title--overed a {
+  color: #FE676E;
 }
 .task-item__header__status {
   display: inline-flex;

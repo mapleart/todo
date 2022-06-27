@@ -32,6 +32,7 @@ Route::get("/vue/home", [App\Http\Controllers\HomeController::class, 'vueHome'])
 Route::get("/vue/home-staff", [App\Http\Controllers\HomeController::class, 'vueHomeStaff'])->name('vueHomeStaff');
 Route::get("/vue/create-task", [App\Http\Controllers\HomeController::class, 'vueCreateTask'])->name('vueCreateTask');
 Route::post("/vue/create-task-submit", [App\Http\Controllers\HomeController::class, 'vueCreateTaskSubmit'])->name('vueCreateTaskSubmit');
+Route::post("/vue/edit-task-submit", [App\Http\Controllers\HomeController::class, 'vueEditTaskSubmit'])->name('vueEditTaskSubmit');
 
 Route::get("/vue/fetch-task", [App\Http\Controllers\HomeController::class, 'vueFetchTask'])->name('vueFetchTask');
 Route::get("/vue/set-task-status", [App\Http\Controllers\HomeController::class, 'vueTaskStatus'])->name('vueTaskStatus');

@@ -21,7 +21,7 @@
                         @click="editActive=false; taskEdited=null;"/>
                 </header>
                 <div class="modal-card-body">
-                    <EditTaskForm v-if="taskEdited" :task-id="taskEdited.id" @close="editActive=false; taskEdited=null;"></EditTaskForm>
+                    <EditTaskForm v-if="taskEdited" :task-id="taskEdited.id" @close="editActive=false; taskEdited=null;"  @update-task="updateTask"></EditTaskForm>
                 </div>
             </div>
         </b-modal>
@@ -77,6 +77,11 @@ export default {
     },
 
     methods: {
+        updateList(){
+            this.page = 1;
+            this.tasks = [];
+            this.fetchList()
+        },
         fetchList(){
             if(this.loading) return;
             this.loading = true;

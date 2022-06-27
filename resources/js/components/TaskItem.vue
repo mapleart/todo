@@ -4,7 +4,7 @@
 
         <div class="task-item__body">
             <div class="task-item__header">
-                <div class="task-item__header__title">
+                <div class="task-item__header__title" :class="{'task-item__header__title--overed': this.overed, 'task-item__header__title--ended': this.task.ended}">
                     <router-link :to="'/task/'+task.id">{{ task.title}}</router-link>
                 </div>
 
@@ -68,6 +68,11 @@
 export default {
     name: 'TaskItem',
     props: ['task'],
+    computed: {
+        overed(){
+            return this.task.over && !this.task.ended;
+        }
+    },
     methods: {
         edit(){
             this.$emit('edit-task', this.task);

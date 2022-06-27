@@ -21,13 +21,13 @@
 
                 <div id="navbarSite" class="navbar-menu">
                     <div class="navbar-start">
-                        <a href="/" class="navbar-item">
+                        <router-link to="/" class="navbar-item">
                             Мои задачи
-                        </a>
+                        </router-link>
 
-                        <a href="/staff" class="navbar-item" v-if="$user.role =='head'">
+                        <router-link to="/staff" class="navbar-item" v-if="$user.role =='head'">
                             Задачи подчиненных
-                        </a>
+                        </router-link>
                     </div>
 
                     <div class="navbar-end">

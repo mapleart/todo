@@ -108,6 +108,9 @@ class Task extends Model
         $data['time_end']=strtotime($this->date_end);
         $data['date_end']= $endDate == date('Y-m-d') ? 'Сегодня' : $endDate;
 
+        $data['over'] = date('Y-m-d H:i:s') > date('Y-m-d 23:59:59', strtotime($this->date_end));
+        $data['ended'] = (int)in_array($this->status, [self::STATUS_ERROR, self::STATUS_SUCCESS]);
+        $data['status'] = (int)$this->status;
         $data['status_code'] = $this->getStatusCode();
         $data['status_text'] = $this->getStatusText();
         $data['priority_code'] = $this->getPriorityCode();

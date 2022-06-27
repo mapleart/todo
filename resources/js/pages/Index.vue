@@ -1,8 +1,9 @@
 <template>
     <div>
+        <AddTaskModal ref="addModal" @created="updateList"></AddTaskModal>
         <div class="tt tt--layout">
             <h2 class="tt__text">Задания</h2>
-            <router-link to="/create-task" class="button is-success is-rounded">+ Задачу</router-link>
+            <a href="/create-task" @click.prevent="openModal" class="button is-success is-rounded">+ Задачу</a>
         </div>
 
         <div class="nv">
@@ -11,13 +12,14 @@
             <a href="#" class="nv__link" :class="{'active': tab == 'all'}" @click="switchTab('all')">на будущее</a>
         </div>
 
-        <TaskList filter-user="all" :filter-date="tab" page-type="my"></TaskList>
+        <TaskList filter-user="all" :filter-date="tab" page-type="my" ref="list"></TaskList>
     </div>
 </template>
 
 <script>
 import TaskList from '../components/TaskList'
 import BeforePageMixin from '../mixins/before-page-mix'
+import AddTaskModal from '../components/AddTaskModal'
 let mix = BeforePageMixin({
     endPoint: '/vue/home'
 });
@@ -35,10 +37,16 @@ export default {
         switchTab(tab){
             if(tab == this.tab) return;
             this.tab = tab;
+        },
+        openModal(){
+            this.$refs.addModal.openModal();
+        },
+        updateList(){
+            this.$refs.list.updateList()
         }
     },
     components: {
-        TaskList
+        TaskList, AddTaskModal
     }
 }
 </script>

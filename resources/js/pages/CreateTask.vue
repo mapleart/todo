@@ -31,10 +31,10 @@
 
 
             <b-field label="Выберите ответственного" v-if="$user.role == 'head'">
-            <b-select placeholder="Ответственный" expanded v-model="form.assigned_id" :loading="loading" :disabled="loading">
-                <option value="0">Выберите ответственного</option>
-                <option v-for="staff in staffs" :value="staff.id">{{ staff.display_name }}</option>
-            </b-select>
+                <b-select placeholder="Ответственный" expanded v-model="form.assigned_id" :loading="loading" :disabled="loading">
+                    <option value="0">Выберите ответственного</option>
+                    <option v-for="staff in staffs" :value="staff.id">{{ staff.display_name }}</option>
+                </b-select>
             </b-field>
 
 

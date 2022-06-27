@@ -32,6 +32,14 @@
         </b-field>
 
 
+        <b-field label="Текущий статус">
+            <b-select placeholder="Статус" expanded v-model="form.status" :loading="updatingTask" :disabled="updatingTask || !allowEditStatus">
+                <option value="0">К выполнению</option>
+                <option value="1">Выполняется</option>
+                <option value="2">Выполнена</option>
+                <option value="5">Отменена</option>
+            </b-select>
+        </b-field>
 
         <b-field label="Приоретет">
             <b-slider :custom-formatter="hardFormatter" :step="1" :min="0" :max="2" :type="sliderColor" v-model="form.priority" :loading="updatingTask" :disabled="updatingTask || !allowEdit">
@@ -56,6 +64,7 @@ const defaultForm = {
     date_end: null,
     assigned_id: 0,
     priority: 0,
+    status: 0
 }
 
 export default {
@@ -89,6 +98,7 @@ export default {
             this.form.description = task.description;
             this.form.assigned_id = task.assigned_id;
             this.form.priority = task.priority;
+            this.form.status = task.status;
             this.form.date_end = new Date(task.time_end * 1000);
             this.minDate = new Date(task.time_end * 1000);
              loadingComponent.close()
@@ -111,8 +121,20 @@ export default {
             let labs = ['Низкий', 'Средний', 'Высокий' ]
             return labs[value];
         },
-        onSubmitEdit(props){
+        onSubmitEdit(){
+            if(this.updatingTask) return false;
+            this.updatingTask = true;
+            let data = { ...this.form, taskId: this.taskId };
+            data.date_end = data.date_end ? data.date_end.yyyymmdd() : '';
+            // this.loading = true;
+            this.$ajax.post('/vue/edit-task-submit', data).then((response)=>{
+                this.updatingTask = false;
+                this.$emit('update-task', response.task)
+                this.$emit('close');
 
+            }, ()=>{
+                this.updatingTask = false;
+            });
         },
     }
 }
