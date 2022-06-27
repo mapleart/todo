@@ -1640,12 +1640,12 @@ a.box:active {
   color: #946c00;
 }
 .button.is-danger {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
   border-color: transparent;
   color: #fff;
 }
 .button.is-danger:hover, .button.is-danger.is-hovered {
-  background-color: #f03a5f;
+  background-color: #fe5a62;
   border-color: transparent;
   color: #fff;
 }
@@ -1654,21 +1654,21 @@ a.box:active {
   color: #fff;
 }
 .button.is-danger:focus:not(:active), .button.is-danger.is-focused:not(:active) {
-  box-shadow: 0 0 0 0.125em rgba(241, 70, 104, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(254, 103, 110, 0.25);
 }
 .button.is-danger:active, .button.is-danger.is-active {
-  background-color: #ef2e55;
+  background-color: #fe4e56;
   border-color: transparent;
   color: #fff;
 }
 .button.is-danger[disabled], fieldset[disabled] .button.is-danger {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
   border-color: transparent;
   box-shadow: none;
 }
 .button.is-danger.is-inverted {
   background-color: #fff;
-  color: hsl(348deg, 86%, 61%);
+  color: #FE676E;
 }
 .button.is-danger.is-inverted:hover, .button.is-danger.is-inverted.is-hovered {
   background-color: #f2f2f2;
@@ -1677,32 +1677,32 @@ a.box:active {
   background-color: #fff;
   border-color: transparent;
   box-shadow: none;
-  color: hsl(348deg, 86%, 61%);
+  color: #FE676E;
 }
 .button.is-danger.is-loading::after {
   border-color: transparent transparent #fff #fff !important;
 }
 .button.is-danger.is-outlined {
   background-color: transparent;
-  border-color: hsl(348deg, 86%, 61%);
-  color: hsl(348deg, 86%, 61%);
+  border-color: #FE676E;
+  color: #FE676E;
 }
 .button.is-danger.is-outlined:hover, .button.is-danger.is-outlined.is-hovered, .button.is-danger.is-outlined:focus, .button.is-danger.is-outlined.is-focused {
-  background-color: hsl(348deg, 86%, 61%);
-  border-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
+  border-color: #FE676E;
   color: #fff;
 }
 .button.is-danger.is-outlined.is-loading::after {
-  border-color: transparent transparent hsl(348deg, 86%, 61%) hsl(348deg, 86%, 61%) !important;
+  border-color: transparent transparent #FE676E #FE676E !important;
 }
 .button.is-danger.is-outlined.is-loading:hover::after, .button.is-danger.is-outlined.is-loading.is-hovered::after, .button.is-danger.is-outlined.is-loading:focus::after, .button.is-danger.is-outlined.is-loading.is-focused::after {
   border-color: transparent transparent #fff #fff !important;
 }
 .button.is-danger.is-outlined[disabled], fieldset[disabled] .button.is-danger.is-outlined {
   background-color: transparent;
-  border-color: hsl(348deg, 86%, 61%);
+  border-color: #FE676E;
   box-shadow: none;
-  color: hsl(348deg, 86%, 61%);
+  color: #FE676E;
 }
 .button.is-danger.is-inverted.is-outlined {
   background-color: transparent;
@@ -1711,10 +1711,10 @@ a.box:active {
 }
 .button.is-danger.is-inverted.is-outlined:hover, .button.is-danger.is-inverted.is-outlined.is-hovered, .button.is-danger.is-inverted.is-outlined:focus, .button.is-danger.is-inverted.is-outlined.is-focused {
   background-color: #fff;
-  color: hsl(348deg, 86%, 61%);
+  color: #FE676E;
 }
 .button.is-danger.is-inverted.is-outlined.is-loading:hover::after, .button.is-danger.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-danger.is-inverted.is-outlined.is-loading:focus::after, .button.is-danger.is-inverted.is-outlined.is-loading.is-focused::after {
-  border-color: transparent transparent hsl(348deg, 86%, 61%) hsl(348deg, 86%, 61%) !important;
+  border-color: transparent transparent #FE676E #FE676E !important;
 }
 .button.is-danger.is-inverted.is-outlined[disabled], fieldset[disabled] .button.is-danger.is-inverted.is-outlined {
   background-color: transparent;
@@ -1723,18 +1723,18 @@ a.box:active {
   color: #fff;
 }
 .button.is-danger.is-light {
-  background-color: #feecf0;
-  color: #cc0f35;
+  background-color: #ffebec;
+  color: #c1010a;
 }
 .button.is-danger.is-light:hover, .button.is-danger.is-light.is-hovered {
-  background-color: #fde0e6;
+  background-color: #ffdee0;
   border-color: transparent;
-  color: #cc0f35;
+  color: #c1010a;
 }
 .button.is-danger.is-light:active, .button.is-danger.is-light.is-active {
-  background-color: #fcd4dc;
+  background-color: #ffd1d4;
   border-color: transparent;
-  color: #cc0f35;
+  color: #c1010a;
 }
 .button.is-small {
   font-size: 0.75rem;
@@ -2300,12 +2300,12 @@ div.icon-text {
   color: #946c00;
 }
 .notification.is-danger {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
   color: #fff;
 }
 .notification.is-danger.is-light {
-  background-color: #feecf0;
-  color: #cc0f35;
+  background-color: #ffebec;
+  color: #c1010a;
 }
 
 .progress, .progress-wrapper.is-not-native {
@@ -2441,16 +2441,16 @@ div.icon-text {
   background-image: linear-gradient(to right, hsl(44deg, 100%, 77%) 30%, hsl(0deg, 0%, 93%) 30%);
 }
 .progress.is-danger::-webkit-progress-value, .is-danger.progress-wrapper.is-not-native::-webkit-progress-value {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
 }
 .progress.is-danger::-moz-progress-bar, .is-danger.progress-wrapper.is-not-native::-moz-progress-bar {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
 }
 .progress.is-danger::-ms-fill, .is-danger.progress-wrapper.is-not-native::-ms-fill {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
 }
 .progress.is-danger:indeterminate, .is-danger.progress-wrapper.is-not-native:indeterminate {
-  background-image: linear-gradient(to right, hsl(348deg, 86%, 61%) 30%, hsl(0deg, 0%, 93%) 30%);
+  background-image: linear-gradient(to right, #FE676E 30%, hsl(0deg, 0%, 93%) 30%);
 }
 .progress:indeterminate, .progress-wrapper.is-not-native:indeterminate {
   -webkit-animation-duration: 1.5s;
@@ -2570,8 +2570,8 @@ div.icon-text {
 }
 .table td.is-danger,
 .table th.is-danger {
-  background-color: hsl(348deg, 86%, 61%);
-  border-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
+  border-color: #FE676E;
   color: #fff;
 }
 .table td.is-narrow,
@@ -2799,12 +2799,12 @@ div.icon-text {
   color: #946c00;
 }
 .tag:not(body).is-danger {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
   color: #fff;
 }
 .tag:not(body).is-danger.is-light {
-  background-color: #feecf0;
-  color: #cc0f35;
+  background-color: #ffebec;
+  color: #c1010a;
 }
 .tag:not(body).is-normal {
   font-size: 0.75rem;
@@ -3089,10 +3089,10 @@ a.tag:hover {
   box-shadow: 0 0 0 0.125em rgba(255, 224, 138, 0.25);
 }
 .taginput .is-danger.taginput-container.is-focusable, .is-danger.textarea, .is-danger.input {
-  border-color: hsl(348deg, 86%, 61%);
+  border-color: #FE676E;
 }
 .taginput .is-danger.taginput-container.is-focusable:focus, .is-danger.textarea:focus, .is-danger.input:focus, .taginput .is-danger.is-focused.taginput-container.is-focusable, .is-danger.is-focused.textarea, .is-danger.is-focused.input, .taginput .is-danger.taginput-container.is-focusable:active, .is-danger.textarea:active, .is-danger.input:active, .taginput .is-danger.is-active.taginput-container.is-focusable, .is-danger.is-active.textarea, .is-danger.is-active.input {
-  box-shadow: 0 0 0 0.125em rgba(241, 70, 104, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(254, 103, 110, 0.25);
 }
 .taginput .is-small.taginput-container.is-focusable, .is-small.textarea, .is-small.input {
   border-radius: 2px;
@@ -3320,16 +3320,16 @@ a.tag:hover {
   box-shadow: 0 0 0 0.125em rgba(255, 224, 138, 0.25);
 }
 .select.is-danger:not(:hover)::after {
-  border-color: hsl(348deg, 86%, 61%);
+  border-color: #FE676E;
 }
 .select.is-danger select {
-  border-color: hsl(348deg, 86%, 61%);
+  border-color: #FE676E;
 }
 .select.is-danger select:hover, .select.is-danger select.is-hovered {
-  border-color: #ef2e55;
+  border-color: #fe4e56;
 }
 .select.is-danger select:focus, .select.is-danger select.is-focused, .select.is-danger select:active, .select.is-danger select.is-active {
-  box-shadow: 0 0 0 0.125em rgba(241, 70, 104, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(254, 103, 110, 0.25);
 }
 .select.is-small {
   border-radius: 2px;
@@ -3554,22 +3554,22 @@ a.tag:hover {
   color: rgba(0, 0, 0, 0.7);
 }
 .file.is-danger .file-cta {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
   border-color: transparent;
   color: #fff;
 }
 .file.is-danger:hover .file-cta, .file.is-danger.is-hovered .file-cta {
-  background-color: #f03a5f;
+  background-color: #fe5a62;
   border-color: transparent;
   color: #fff;
 }
 .file.is-danger:focus .file-cta, .file.is-danger.is-focused .file-cta {
   border-color: transparent;
-  box-shadow: 0 0 0.5em rgba(241, 70, 104, 0.25);
+  box-shadow: 0 0 0.5em rgba(254, 103, 110, 0.25);
   color: #fff;
 }
 .file.is-danger:active .file-cta, .file.is-danger.is-active .file-cta {
-  background-color: #ef2e55;
+  background-color: #fe4e56;
   border-color: transparent;
   color: #fff;
 }
@@ -3784,7 +3784,7 @@ a.tag:hover {
   color: hsl(44deg, 100%, 77%);
 }
 .help.is-danger {
-  color: hsl(348deg, 86%, 61%);
+  color: #FE676E;
 }
 
 .field:not(:last-child) {
@@ -4585,15 +4585,15 @@ button.dropdown-item.is-active {
   color: #946c00;
 }
 .message.is-danger {
-  background-color: #feecf0;
+  background-color: #ffebec;
 }
 .message.is-danger .message-header {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
   color: #fff;
 }
 .message.is-danger .message-body {
-  border-color: hsl(348deg, 86%, 61%);
-  color: #cc0f35;
+  border-color: #FE676E;
+  color: #c1010a;
 }
 
 .message-header {
@@ -5240,7 +5240,7 @@ button.dropdown-item.is-active {
   }
 }
 .navbar.is-danger {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
   color: #fff;
 }
 .navbar.is-danger .navbar-brand > .navbar-item,
@@ -5251,7 +5251,7 @@ button.dropdown-item.is-active {
 .navbar.is-danger .navbar-brand .navbar-link:focus,
 .navbar.is-danger .navbar-brand .navbar-link:hover,
 .navbar.is-danger .navbar-brand .navbar-link.is-active {
-  background-color: #ef2e55;
+  background-color: #fe4e56;
   color: #fff;
 }
 .navbar.is-danger .navbar-brand .navbar-link::after {
@@ -5277,7 +5277,7 @@ button.dropdown-item.is-active {
 .navbar.is-danger .navbar-end .navbar-link:focus,
 .navbar.is-danger .navbar-end .navbar-link:hover,
 .navbar.is-danger .navbar-end .navbar-link.is-active {
-    background-color: #ef2e55;
+    background-color: #fe4e56;
     color: #fff;
   }
   .navbar.is-danger .navbar-start .navbar-link::after,
@@ -5287,11 +5287,11 @@ button.dropdown-item.is-active {
   .navbar.is-danger .navbar-item.has-dropdown:focus .navbar-link,
 .navbar.is-danger .navbar-item.has-dropdown:hover .navbar-link,
 .navbar.is-danger .navbar-item.has-dropdown.is-active .navbar-link {
-    background-color: #ef2e55;
+    background-color: #fe4e56;
     color: #fff;
   }
   .navbar.is-danger .navbar-dropdown a.navbar-item.is-active {
-    background-color: hsl(348deg, 86%, 61%);
+    background-color: #FE676E;
     color: #fff;
   }
 }
@@ -5979,14 +5979,14 @@ body.has-spaced-navbar-fixed-bottom {
   color: hsl(44deg, 100%, 77%);
 }
 .panel.is-danger .panel-heading {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
   color: #fff;
 }
 .panel.is-danger .panel-tabs a.is-active {
-  border-bottom-color: hsl(348deg, 86%, 61%);
+  border-bottom-color: #FE676E;
 }
 .panel.is-danger .panel-block.is-active .panel-icon {
-  color: hsl(348deg, 86%, 61%);
+  color: #FE676E;
 }
 
 .panel-tabs:not(:last-child),
@@ -8182,39 +8182,39 @@ a.has-text-warning-dark:hover, a.has-text-warning-dark:focus {
 }
 
 .has-text-danger {
-  color: hsl(348deg, 86%, 61%) !important;
+  color: #FE676E !important;
 }
 
 a.has-text-danger:hover, a.has-text-danger:focus {
-  color: #ee1742 !important;
+  color: #fe343e !important;
 }
 
 .has-background-danger {
-  background-color: hsl(348deg, 86%, 61%) !important;
+  background-color: #FE676E !important;
 }
 
 .has-text-danger-light {
-  color: #feecf0 !important;
+  color: #ffebec !important;
 }
 
 a.has-text-danger-light:hover, a.has-text-danger-light:focus {
-  color: #fabdc9 !important;
+  color: #ffb8bb !important;
 }
 
 .has-background-danger-light {
-  background-color: #feecf0 !important;
+  background-color: #ffebec !important;
 }
 
 .has-text-danger-dark {
-  color: #cc0f35 !important;
+  color: #c1010a !important;
 }
 
 a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
-  color: #ee2049 !important;
+  color: #f3020d !important;
 }
 
 .has-background-danger-dark {
-  background-color: #cc0f35 !important;
+  background-color: #c1010a !important;
 }
 
 .has-text-black-bis {
@@ -10385,7 +10385,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   }
 }
 .hero.is-danger {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
   color: #fff;
 }
 .hero.is-danger a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
@@ -10404,7 +10404,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 @media screen and (max-width: 1023px) {
   .hero.is-danger .navbar-menu {
-    background-color: hsl(348deg, 86%, 61%);
+    background-color: #FE676E;
   }
 }
 .hero.is-danger .navbar-item,
@@ -10414,7 +10414,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.is-danger a.navbar-item:hover, .hero.is-danger a.navbar-item.is-active,
 .hero.is-danger .navbar-link:hover,
 .hero.is-danger .navbar-link.is-active {
-  background-color: #ef2e55;
+  background-color: #fe4e56;
   color: #fff;
 }
 .hero.is-danger .tabs a {
@@ -10425,7 +10425,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   opacity: 1;
 }
 .hero.is-danger .tabs li.is-active a {
-  color: hsl(348deg, 86%, 61%) !important;
+  color: #FE676E !important;
   opacity: 1;
 }
 .hero.is-danger .tabs.is-boxed a, .hero.is-danger .tabs.is-toggle a {
@@ -10437,14 +10437,14 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.is-danger .tabs.is-boxed li.is-active a, .hero.is-danger .tabs.is-boxed li.is-active a:hover, .hero.is-danger .tabs.is-toggle li.is-active a, .hero.is-danger .tabs.is-toggle li.is-active a:hover {
   background-color: #fff;
   border-color: #fff;
-  color: hsl(348deg, 86%, 61%);
+  color: #FE676E;
 }
 .hero.is-danger.is-bold {
-  background-image: linear-gradient(141deg, #fa0a62 0%, hsl(348deg, 86%, 61%) 71%, #f7595f 100%);
+  background-image: linear-gradient(141deg, #ff335e 0%, #FE676E 71%, #ff8f80 100%);
 }
 @media screen and (max-width: 768px) {
   .hero.is-danger.is-bold .navbar-menu {
-    background-image: linear-gradient(141deg, #fa0a62 0%, hsl(348deg, 86%, 61%) 71%, #f7595f 100%);
+    background-image: linear-gradient(141deg, #ff335e 0%, #FE676E 71%, #ff8f80 100%);
   }
 }
 .hero.is-small .hero-body {
@@ -11102,8 +11102,8 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   border-color: hsl(44deg, 100%, 77%);
 }
 .b-checkbox.checkbox input[type=checkbox]:checked + .check.is-danger {
-  background: hsl(348deg, 86%, 61%) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:%23fff' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
-  border-color: hsl(348deg, 86%, 61%);
+  background: #FE676E url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:%23fff' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+  border-color: #FE676E;
 }
 .b-checkbox.checkbox input[type=checkbox]:indeterminate + .check {
   background: #0672CC url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect style='fill:%23fff' width='0.7' height='0.2' x='.15' y='.4'%3E%3C/rect%3E%3C/svg%3E") no-repeat center center;
@@ -11146,8 +11146,8 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   border-color: hsl(44deg, 100%, 77%);
 }
 .b-checkbox.checkbox input[type=checkbox]:indeterminate + .check.is-danger {
-  background: hsl(348deg, 86%, 61%) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect style='fill:%23fff' width='0.7' height='0.2' x='.15' y='.4'%3E%3C/rect%3E%3C/svg%3E") no-repeat center center;
-  border-color: hsl(348deg, 86%, 61%);
+  background: #FE676E url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect style='fill:%23fff' width='0.7' height='0.2' x='.15' y='.4'%3E%3C/rect%3E%3C/svg%3E") no-repeat center center;
+  border-color: #FE676E;
 }
 .b-checkbox.checkbox input[type=checkbox]:focus + .check {
   box-shadow: 0 0 0.5em rgba(122, 122, 122, 0.8);
@@ -11183,7 +11183,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   box-shadow: 0 0 0.5em rgba(255, 224, 138, 0.8);
 }
 .b-checkbox.checkbox input[type=checkbox]:focus:checked + .check.is-danger {
-  box-shadow: 0 0 0.5em rgba(241, 70, 104, 0.8);
+  box-shadow: 0 0 0.5em rgba(254, 103, 110, 0.8);
 }
 .b-checkbox.checkbox .control-label {
   padding-left: calc(0.75em - 1px);
@@ -11225,7 +11225,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   border-color: hsl(44deg, 100%, 77%);
 }
 .b-checkbox.checkbox:hover input[type=checkbox]:not(:disabled) + .check.is-danger {
-  border-color: hsl(348deg, 86%, 61%);
+  border-color: #FE676E;
 }
 .b-checkbox.checkbox.is-small {
   border-radius: 2px;
@@ -11389,18 +11389,18 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   color: rgba(0, 0, 0, 0.7);
 }
 .b-clockpicker.is-danger .card-header {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
   color: #fff;
 }
 .b-clockpicker.is-danger .b-clockpicker-face:after {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
 }
 .b-clockpicker.is-danger .b-clockpicker-face-hand {
-  background-color: hsl(348deg, 86%, 61%);
-  border-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
+  border-color: #FE676E;
 }
 .b-clockpicker.is-danger .b-clockpicker-face-number.active {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
   color: #fff;
 }
 .b-clockpicker .dropdown-menu {
@@ -12003,7 +12003,7 @@ div.b-colorpicker-square .colorpicker-square-slider-sl .sl-range-thumb:active {
   background-color: hsl(44deg, 100%, 77%);
 }
 .datepicker .datepicker-table .datepicker-body.has-events .datepicker-cell.has-event .events .event.is-danger {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
 }
 .datepicker .datepicker-table .datepicker-body.has-events .datepicker-cell.has-event.dots .event {
   border-radius: 50%;
@@ -12615,7 +12615,7 @@ div.b-colorpicker-square .colorpicker-square-slider-sl .sl-range-thumb:active {
 }
 .notices .toast.is-danger {
   color: #fff;
-  background: hsl(348deg, 86%, 61%);
+  background: #FE676E;
 }
 .notices .snackbar {
   display: inline-flex;
@@ -12679,7 +12679,7 @@ div.b-colorpicker-square .colorpicker-square-slider-sl .sl-range-thumb:active {
   color: hsl(44deg, 100%, 77%);
 }
 .notices .snackbar .action.is-danger .button {
-  color: hsl(348deg, 86%, 61%);
+  color: #FE676E;
 }
 .notices .snackbar .action.is-cancel {
   padding-right: 0;
@@ -13061,7 +13061,7 @@ div.b-colorpicker-square .colorpicker-square-slider-sl .sl-range-thumb:active {
   color: rgba(0, 0, 0, 0.7);
 }
 .progress-wrapper.is-not-native .progress-bar.is-danger {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
 }
 .progress-wrapper.is-not-native .progress-bar.is-danger .progress-value {
   color: #fff;
@@ -13145,7 +13145,7 @@ div.b-colorpicker-square .colorpicker-square-slider-sl .sl-range-thumb:active {
   background: hsl(44deg, 100%, 77%);
 }
 .b-radio.radio input[type=radio] + .check.is-danger:before {
-  background: hsl(348deg, 86%, 61%);
+  background: #FE676E;
 }
 .b-radio.radio input[type=radio]:checked + .check {
   border-color: #0672CC;
@@ -13178,7 +13178,7 @@ div.b-colorpicker-square .colorpicker-square-slider-sl .sl-range-thumb:active {
   border-color: hsl(44deg, 100%, 77%);
 }
 .b-radio.radio input[type=radio]:checked + .check.is-danger {
-  border-color: hsl(348deg, 86%, 61%);
+  border-color: #FE676E;
 }
 .b-radio.radio input[type=radio]:checked + .check:before {
   transform: scale(0.5);
@@ -13217,7 +13217,7 @@ div.b-colorpicker-square .colorpicker-square-slider-sl .sl-range-thumb:active {
   box-shadow: 0 0 0.5em rgba(255, 224, 138, 0.8);
 }
 .b-radio.radio input[type=radio]:focus:checked + .check.is-danger {
-  box-shadow: 0 0 0.5em rgba(241, 70, 104, 0.8);
+  box-shadow: 0 0 0.5em rgba(254, 103, 110, 0.8);
 }
 .b-radio.radio .control-label {
   padding-left: calc(0.75em - 1px);
@@ -13262,7 +13262,7 @@ div.b-colorpicker-square .colorpicker-square-slider-sl .sl-range-thumb:active {
   border-color: hsl(44deg, 100%, 77%);
 }
 .b-radio.radio:hover input[type=radio]:not(:disabled) + .check.is-danger {
-  border-color: hsl(348deg, 86%, 61%);
+  border-color: #FE676E;
 }
 .b-radio.radio.is-small {
   border-radius: 2px;
@@ -13466,7 +13466,7 @@ div.b-colorpicker-square .colorpicker-square-slider-sl .sl-range-thumb:active {
   background-color: hsl(44deg, 100%, 77%);
 }
 .b-sidebar .sidebar-content.is-danger {
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
 }
 .b-sidebar .sidebar-content.is-fixed {
   position: fixed;
@@ -13719,7 +13719,7 @@ div.b-colorpicker-square .colorpicker-square-slider-sl .sl-range-thumb:active {
   background: hsl(44deg, 100%, 77%) !important;
 }
 .b-slider.is-danger .b-slider-fill {
-  background: hsl(348deg, 86%, 61%) !important;
+  background: #FE676E !important;
 }
 .b-slider .b-slider-tick {
   position: absolute;
@@ -13952,21 +13952,21 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   background-position: left bottom;
 }
 .b-steps .steps .step-items .step-item.is-danger::before, .b-steps .steps .step-items .step-item.is-danger::after {
-  background: linear-gradient(to left, hsl(0deg, 0%, 86%) 50%, hsl(348deg, 86%, 61%) 50%);
+  background: linear-gradient(to left, hsl(0deg, 0%, 86%) 50%, #FE676E 50%);
   background-size: 200% 100%;
   background-position: right bottom;
 }
 .b-steps .steps .step-items .step-item.is-danger.is-active .step-marker {
   background-color: hsl(0deg, 0%, 100%);
-  border-color: hsl(348deg, 86%, 61%);
-  color: hsl(348deg, 86%, 61%);
+  border-color: #FE676E;
+  color: #FE676E;
 }
 .b-steps .steps .step-items .step-item.is-danger.is-active::before, .b-steps .steps .step-items .step-item.is-danger.is-active::after {
   background-position: left bottom;
 }
 .b-steps .steps .step-items .step-item.is-danger.is-previous .step-marker {
   color: #fff;
-  background-color: hsl(348deg, 86%, 61%);
+  background-color: #FE676E;
 }
 .b-steps .steps .step-items .step-item.is-danger.is-previous::before, .b-steps .steps .step-items .step-item.is-danger.is-previous::after {
   background-position: left bottom;
@@ -14296,7 +14296,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   background-position: left bottom;
 }
 .b-steps.is-vertical > .steps .step-items .step-item.is-danger::before, .b-steps.is-vertical > .steps .step-items .step-item.is-danger::after {
-  background: linear-gradient(to top, hsl(0deg, 0%, 86%) 50%, hsl(348deg, 86%, 61%) 50%);
+  background: linear-gradient(to top, hsl(0deg, 0%, 86%) 50%, #FE676E 50%);
   background-size: 100% 200%;
   background-position: left bottom;
 }
@@ -14443,7 +14443,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   background: "pink";
 }
 .switch input[type=checkbox] + .check.is-danger-passive, .switch input[type=checkbox] + .check:hover {
-  background: hsl(348deg, 86%, 61%);
+  background: #FE676E;
 }
 .switch input[type=checkbox] + .check.input[type=checkbox] + .switch input[type=checkbox] + .check.check {
   background: "pink";
@@ -14495,7 +14495,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   background: hsl(44deg, 100%, 77%);
 }
 .switch input[type=checkbox]:checked + .check.is-danger {
-  background: hsl(348deg, 86%, 61%);
+  background: #FE676E;
 }
 .switch input[type=checkbox]:checked + .check:before {
   transform: translate3d(100%, 0, 0);
@@ -14537,7 +14537,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   box-shadow: 0 0 0.5em rgba(255, 224, 138, 0.8);
 }
 .switch input[type=checkbox]:focus + .check.is-danger-passive, .switch input[type=checkbox]:active + .check.is-danger-passive {
-  box-shadow: 0 0 0.5em rgba(241, 70, 104, 0.8);
+  box-shadow: 0 0 0.5em rgba(254, 103, 110, 0.8);
 }
 .switch input[type=checkbox]:focus:checked + .check, .switch input[type=checkbox]:active:checked + .check {
   box-shadow: 0 0 0.5em rgba(6, 114, 204, 0.8);
@@ -14570,7 +14570,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   box-shadow: 0 0 0.5em rgba(255, 224, 138, 0.8);
 }
 .switch input[type=checkbox]:focus:checked + .check.is-danger, .switch input[type=checkbox]:active:checked + .check.is-danger {
-  box-shadow: 0 0 0.5em rgba(241, 70, 104, 0.8);
+  box-shadow: 0 0 0.5em rgba(254, 103, 110, 0.8);
 }
 .switch.has-left-label {
   flex-direction: row-reverse;
@@ -14612,7 +14612,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   background: rgba(255, 224, 138, 0.9);
 }
 .switch:hover input[type=checkbox] + .check.is-danger-passive {
-  background: rgba(241, 70, 104, 0.9);
+  background: rgba(254, 103, 110, 0.9);
 }
 .switch:hover input[type=checkbox]:checked + .check {
   background: rgba(6, 114, 204, 0.9);
@@ -14645,7 +14645,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   background: rgba(255, 224, 138, 0.9);
 }
 .switch:hover input[type=checkbox]:checked + .check.is-danger {
-  background: rgba(241, 70, 104, 0.9);
+  background: rgba(254, 103, 110, 0.9);
 }
 .switch.is-rounded input[type=checkbox] + .check {
   border-radius: 9999px;
@@ -14743,13 +14743,13 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   border-color: rgba(255, 224, 138, 0.9);
 }
 .switch.is-outlined input[type=checkbox] + .check.is-danger-passive {
-  border: 0.1rem solid rgba(241, 70, 104, 0.9);
+  border: 0.1rem solid rgba(254, 103, 110, 0.9);
 }
 .switch.is-outlined input[type=checkbox] + .check.is-danger-passive:before {
-  background: hsl(348deg, 86%, 61%);
+  background: #FE676E;
 }
 .switch.is-outlined input[type=checkbox] + .check.is-danger-passive:hover {
-  border-color: rgba(241, 70, 104, 0.9);
+  border-color: rgba(254, 103, 110, 0.9);
 }
 .switch.is-outlined input[type=checkbox] + .check:before {
   background: hsl(0deg, 0%, 71%);
@@ -14822,10 +14822,10 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 }
 .switch.is-outlined input[type=checkbox]:checked + .check.is-danger {
   background: transparent;
-  border-color: hsl(348deg, 86%, 61%);
+  border-color: #FE676E;
 }
 .switch.is-outlined input[type=checkbox]:checked + .check.is-danger:before {
-  background: hsl(348deg, 86%, 61%);
+  background: #FE676E;
 }
 .switch.is-outlined input[type=checkbox]:checked + .check:before {
   background: #0672CC;
@@ -14866,7 +14866,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   border-color: rgba(255, 224, 138, 0.9);
 }
 .switch.is-outlined:hover input[type=checkbox]:checked + .check.is-danger {
-  border-color: rgba(241, 70, 104, 0.9);
+  border-color: rgba(254, 103, 110, 0.9);
 }
 .switch.is-small {
   border-radius: 2px;
@@ -15359,10 +15359,10 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   text-decoration: none;
 }
 .tag .delete.is-danger, .tag.is-delete.is-danger, .tag.has-delete-icon.is-danger {
-  background: hsl(348deg, 86%, 61%);
+  background: #FE676E;
 }
 .tag .delete.is-danger:hover, .tag.is-delete.is-danger:hover, .tag.has-delete-icon.is-danger:hover {
-  background-color: #ee1742;
+  background-color: #fe343e;
   text-decoration: none;
 }
 .tag.has-delete-icon {
@@ -15572,10 +15572,10 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   border-top-color: #fffaeb;
 }
 .b-tooltip.is-top.is-danger .tooltip-content::before {
-  border-top-color: hsl(348deg, 86%, 61%);
+  border-top-color: #FE676E;
 }
 .b-tooltip.is-top.is-danger.is-light .tooltip-content::before {
-  border-top-color: #feecf0;
+  border-top-color: #ffebec;
 }
 .b-tooltip.is-right .tooltip-content {
   top: 50%;
@@ -15637,10 +15637,10 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   border-right-color: #fffaeb;
 }
 .b-tooltip.is-right.is-danger .tooltip-content::before {
-  border-right-color: hsl(348deg, 86%, 61%);
+  border-right-color: #FE676E;
 }
 .b-tooltip.is-right.is-danger.is-light .tooltip-content::before {
-  border-right-color: #feecf0;
+  border-right-color: #ffebec;
 }
 .b-tooltip.is-bottom .tooltip-content {
   top: calc(100% + 5px + 2px);
@@ -15702,10 +15702,10 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   border-bottom-color: #fffaeb;
 }
 .b-tooltip.is-bottom.is-danger .tooltip-content::before {
-  border-bottom-color: hsl(348deg, 86%, 61%);
+  border-bottom-color: #FE676E;
 }
 .b-tooltip.is-bottom.is-danger.is-light .tooltip-content::before {
-  border-bottom-color: #feecf0;
+  border-bottom-color: #ffebec;
 }
 .b-tooltip.is-left .tooltip-content {
   top: 50%;
@@ -15767,10 +15767,10 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   border-left-color: #fffaeb;
 }
 .b-tooltip.is-left.is-danger .tooltip-content::before {
-  border-left-color: hsl(348deg, 86%, 61%);
+  border-left-color: #FE676E;
 }
 .b-tooltip.is-left.is-danger.is-light .tooltip-content::before {
-  border-left-color: #feecf0;
+  border-left-color: #ffebec;
 }
 .b-tooltip .tooltip-content {
   width: auto;
@@ -15849,12 +15849,12 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   color: #946c00;
 }
 .b-tooltip.is-danger .tooltip-content {
-  background: hsl(348deg, 86%, 61%);
+  background: #FE676E;
   color: #fff;
 }
 .b-tooltip.is-danger.is-light .tooltip-content {
-  background: #feecf0;
-  color: #cc0f35;
+  background: #ffebec;
+  color: #c1010a;
 }
 .b-tooltip.is-always .tooltip-content::before,
 .b-tooltip.is-always .tooltip-content {
@@ -15968,8 +15968,8 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   background: rgba(255, 224, 138, 0.05);
 }
 .upload .upload-draggable:hover.is-danger, .upload .upload-draggable.is-hovered.is-danger {
-  border-color: hsl(348deg, 86%, 61%);
-  background: rgba(241, 70, 104, 0.05);
+  border-color: #FE676E;
+  background: rgba(254, 103, 110, 0.05);
 }
 .upload .upload-draggable.is-expanded {
   width: 100%;
@@ -16006,7 +16006,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 }
 
 .text-color--red {
-  color: #e74c3c;
+  color: #FE676E !important;
 }
 
 .tt {
@@ -16072,10 +16072,166 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   font-weight: 500;
 }
 
-body {
-  background: #f9f9f9;
-  font-family: "Montserrat", sans-serif;
-  min-height: 100vh;
+.a-panel {
+  background: #FFFFFF;
+  box-shadow: 0px 7px 55px rgba(228, 235, 240, 0.75);
+  border-radius: 10px;
+  padding: 35px 28px 40px;
+}
+.a-panel__title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 29px;
+  color: #000000;
+}
+.a-panel__subtitle {
+  font-size: 18px;
+  color: #8F989F;
+  margin-bottom: 30px;
+}
+
+.task-item {
+  position: relative;
+  box-shadow: 0 7px 55px 0 rgba(237, 240, 243, 0.75);
+  background-color: #ffffff;
+  padding: 27px 27px 30px 33px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+.task-item__clicker {
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.task-item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 27px;
+  background: #9AA6B0;
+  width: 5px;
+  height: calc(100% - 50px);
+  border-radius: 0 5px 5px 0;
+}
+.task-item--low:before {
+  background: #1EBE96;
+}
+.task-item--middle:before {
+  background: #EBAA02;
+}
+.task-item--high:before {
+  background: #FE676E;
+}
+.task-item__header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.task-item__header__title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #000000;
+  text-transform: uppercase;
+}
+.task-item__header__title a {
+  color: #000000;
+}
+.task-item__header__title a:hover {
+  color: #0672CC;
+}
+.task-item__header__status {
+  display: inline-flex;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 17px;
+  background: #9AA6B0;
+  color: #fff;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.task-item__header__status--success {
+  background: #44D28B;
+}
+.task-item__header__status--error {
+  background: #FE676E;
+}
+.task-item__text {
+  padding: 20px 23px 19px 23px;
+  border-radius: 10px;
+  background-color: #f6f6f6;
+  font-size: 16px;
+  font-weight: normal;
+  color: #536575;
+  margin-bottom: 20px;
+  line-height: 18px;
+}
+.task-item__params {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.task-item__param {
+  display: inline-flex;
+  position: relative;
+  padding-right: 39px;
+  line-height: 25px;
+}
+.task-item__param--date {
+  font-size: 12px;
+  color: #9AA6B0;
+}
+.task-item__param--date span {
+  margin-right: 5px;
+}
+.task-item__param--priority {
+  font-weight: bold;
+}
+.task-item__param--priority_low {
+  color: #1EBE96;
+}
+.task-item__param--priority_middle {
+  color: #EBAA02;
+}
+.task-item__param--priority_high {
+  color: #FE676E;
+}
+.task-item__param__param:before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 7px);
+  height: 14px;
+  width: 1px;
+  background: #E1E7ED;
+}
+.task-item__param:last-child:before {
+  display: none;
+}
+.task-item__users {
+  display: flex;
+  align-items: center;
+}
+.task-item__users__arrow {
+  margin: 0 20px;
+}
+.task-item__user {
+  display: inline-flex;
+  font-size: 13px;
+  color: #000000;
+  align-items: center;
+}
+.task-item__user img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 50%;
 }
 
 .p-panel {
@@ -16106,24 +16262,6 @@ body {
 .p-panel__subtitle {
   font-size: 18px;
   color: #8F989F;
-}
-
-.a-panel {
-  background: #FFFFFF;
-  box-shadow: 0px 7px 55px rgba(228, 235, 240, 0.75);
-  border-radius: 10px;
-  padding: 35px 28px 40px;
-}
-.a-panel__title {
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 29px;
-  color: #000000;
-}
-.a-panel__subtitle {
-  font-size: 18px;
-  color: #8F989F;
-  margin-bottom: 30px;
 }
 
 .u-item {
@@ -16162,56 +16300,8 @@ body {
   background: rgba(6, 114, 204, 0.05);
 }
 
-.task-item {
-  position: relative;
-  box-shadow: 0 7px 55px 0 rgba(237, 240, 243, 0.75);
-  background-color: #ffffff;
-  padding: 27px 27px 30px 33px;
-  border-radius: 10px;
-  margin-bottom: 18px;
-}
-.task-item:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 27px;
-  background: #9AA6B0;
-  width: 5px;
-  height: calc(100% - 50px);
-  border-radius: 0 5px 5px 0;
-}
-.task-item__header {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-.task-item__header__title {
-  font-size: 13px;
-  font-weight: 500;
-  color: #000000;
-  text-transform: uppercase;
-}
-.task-item__header__status {
-  display: inline-flex;
-  height: 34px;
-  padding: 0 10px;
-  border-radius: 17px;
-  background: #9AA6B0;
-  color: #fff;
-  font-size: 12px;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-.task-item__text {
-  padding: 20px 23px 19px 23px;
-  border-radius: 10px;
-  background-color: #f6f6f6;
-  font-size: 16px;
-  font-weight: normal;
-  color: #536575;
-  margin-bottom: 20px;
-  line-height: 18px;
+body {
+  background: #f9f9f9;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
 }

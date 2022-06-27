@@ -24,6 +24,8 @@ $vuePages = ['home', 'profile', 'staff', 'create-task'];
 foreach ($vuePages as $page) {
     Route::get("/$page", [App\Http\Controllers\HomeController::class, 'index'])->name($page);
 }
+Route::get('/task/{id}', [App\Http\Controllers\HomeController::class, 'index'])->name('viewTask');
+
 Route::get("/vue/profile", [App\Http\Controllers\HomeController::class, 'vueProfile'])->name('vueProfile');
 Route::post("/vue/save-profile", [App\Http\Controllers\HomeController::class, 'vueSaveProfile'])->name('vueSaveProfile');
 Route::get("/vue/home", [App\Http\Controllers\HomeController::class, 'vueHome'])->name('vueHome');
@@ -33,6 +35,8 @@ Route::post("/vue/create-task-submit", [App\Http\Controllers\HomeController::cla
 
 Route::get("/vue/fetch-task", [App\Http\Controllers\HomeController::class, 'vueFetchTask'])->name('vueFetchTask');
 Route::get("/vue/set-task-status", [App\Http\Controllers\HomeController::class, 'vueTaskStatus'])->name('vueTaskStatus');
+Route::get("/vue/view-task", [App\Http\Controllers\HomeController::class, 'vueTaskView'])->name('vueTaskView');
+Route::get("/vue/get-edit-data", [App\Http\Controllers\HomeController::class, 'vueTaskEditData'])->name('vueTaskEditData');
 
 
 

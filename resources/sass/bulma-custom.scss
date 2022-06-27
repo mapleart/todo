@@ -12,6 +12,11 @@ $success-light: findLightColor($success);
 $success-dark: findDarkColor($success);
 $success-invert: findColorInvert($success);
 
+$danger: #FE676E;
+$danger-light: findLightColor($danger);
+$danger-dark: findDarkColor($danger);
+$danger-invert: findColorInvert($danger);
+
 $light: #D0D7DE;
 
 // Инпуты

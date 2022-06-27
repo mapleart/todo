@@ -8,6 +8,7 @@ import Index from '../pages/Index'
 import Staff from '../pages/Staff'
 import Profile from '../pages/Profile'
 import CreateTask from '../pages/CreateTask'
+import Task from '../pages/Task'
 import Admin from '../admin/pages/Index'
 import NotFound from '../pages/Error'
 
@@ -48,6 +49,11 @@ export default new Router({
             path: '/create-task',
             name: 'create-task',
             component: CreateTask,
+        },
+        {
+            path: '/task/:taskId',
+            name: 'task',
+            component: Task,
         },
         // Роуты только для админа
         ...adminRoutes,

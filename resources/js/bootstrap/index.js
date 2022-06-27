@@ -1,4 +1,7 @@
 import Vue from 'vue';
+window.moment = require('moment');
+moment.locale('ru');
+
 
 Date.prototype.yyyymmdd = function() {
     var mm = this.getMonth() + 1; // getMonth() is zero-based
@@ -10,6 +13,20 @@ Date.prototype.yyyymmdd = function() {
     ].join('-');
 };
 
+Vue.filter('moment', function (date) {
+    date = moment.unix(date);
+
+    var now = moment();
+
+    if (moment.duration(now.diff(date)).asHours() > 24) {
+        return date.format("DD.MM.YYYY HH:mm");
+    } else if (moment.duration(now.diff(date)).asSeconds() > 20) {
+        return date.fromNow();
+
+    } else {
+        return 'Только что';
+    }
+});
 
 import './validate'
 

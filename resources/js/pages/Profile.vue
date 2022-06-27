@@ -18,19 +18,19 @@
 
                 <div class="tile is-parent">
                     <article class="tile is-child box">
-                        <p class="title">0</p>
-                        <p class="subtitle">Горят сроки</p>
+                        <p class="title" :class="{'text-color--red': counters.hot > 0}">{{counters.hot}}</p>
+                        <p class="subtitle" :class="{'text-color--red': counters.hot > 0}">Горят сроки</p>
                     </article>
                 </div>
                 <div class="tile is-parent">
                     <article class="tile is-child box">
-                        <p class="title">1</p>
+                        <p class="title">{{counters.active}}</p>
                         <p class="subtitle">Активных задач</p>
                     </article>
                 </div>
                 <div class="tile is-parent">
                     <article class="tile is-child box">
-                        <p class="title">2</p>
+                        <p class="title">{{counters.end}}</p>
                         <p class="subtitle">Завершенных задач</p>
                     </article>
                 </div>
@@ -48,21 +48,22 @@
                 <div class="card events-card">
                     <header class="card-header">
                         <p class="card-header-title">
-                             Последние задачи
+                             Последние завершенные задачи
                         </p>
                     </header>
                     <div class="card-table">
                         <div class="content">
-                            <table class="table is-fullwidth is-striped">
+                            <table class="table is-fullwidth is-striped" v-if="endTasks && endTasks.length > 0">
                                 <tbody>
-                                <tr>
-                                    <td><a href="">Сделать ToDo</a></td>
-                                </tr>
-                                <tr>
-                                    <td><a href="">Сделать ToDo List</a> </td>
+                                <tr v-for="task in endTasks">
+                                    <td><router-link :to="'/task/'+task.id">{{ task.title}}</router-link></td>
                                 </tr>
                                 </tbody>
                             </table>
+
+                            <b-notification type="is-info is-light" :closable="false" aria-close-label="Закрыть" v-else>
+                                Пока завершеных задач нет
+                            </b-notification>
                         </div>
                     </div>
                 </div>
@@ -111,6 +112,7 @@ export default {
     data() {
         return {
             user: null,
+            endTasks: [],
             isSaving: false,
             counters: {},
             form: {
@@ -124,6 +126,7 @@ export default {
     methods: {
         pageSuccess(response) {
             this.user = response.user;
+            this.endTasks = response.endTasks || [];
             this.counters = response.counters;
             this.form.name = this.user.name;
             this.form.surname = this.user.surname;

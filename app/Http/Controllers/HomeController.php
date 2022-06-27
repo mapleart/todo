@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use function Symfony\Component\String\b;
 
 class HomeController extends Controller
 {
@@ -36,8 +37,12 @@ class HomeController extends Controller
      */
     public function vueProfile(){
         return [
+            'endTasks'=>Task::where('assigned_id', Auth::user()->id)->whereIn('status', array(Task::STATUS_SUCCESS, Task::STATUS_ERROR))->get(),
             'user'=>Auth::user(),
             'counters'=>[
+                'hot'=>Task::where('assigned_id', Auth::user()->id)->whereBetween('date_end', array(date('Y-m-d 00:00:00'), date('Y-m-d 23:59:59')))->count(),
+                'active'=>Task::where('assigned_id', Auth::user()->id)->whereIn('status', array(Task::STATUS_NEW, Task::STATUS_PROCESS))->count(),
+                'end'=>Task::where('assigned_id', Auth::user()->id)->whereIn('status', array(Task::STATUS_SUCCESS, Task::STATUS_ERROR))->count(),
                 'staffs'=>User::where('parent_id', Auth::user()->id)->count()
             ],
             'success'=>1
@@ -154,8 +159,30 @@ class HomeController extends Controller
         $filterUser = $request->get('filterUser', 'all');
 
         $tasks = Task::query();
-        $userIds = [];
 
+        // Собираем фильтр по дате
+        $baseOrder = 'date_end';
+        $baseOrderDir = 'desc';
+        switch ($filterDate) {
+            case 'today':
+                $tasks->whereBetween('date_end', array(date('Y-m-d 00:00:00'), date('Y-m-d 23:59:59')));
+                $baseOrderDir = 'asc';
+                break;
+            case 'week':
+                $startDate = date('Y-m-d 00:00:00');
+                $endDate = strtotime($startDate);
+                $endDate = strtotime("+7 day", $endDate);
+                $tasks->whereBetween('date_end', array(date('Y-m-d 00:00:00'), date('Y-m-d 23:59:59', $endDate)));
+                $baseOrderDir = 'asc';
+                break;
+            case 'all':
+            default:
+                $baseOrder = 'updated_at';
+
+        }
+
+        // Собираем фильтр по пользователям
+        $userIds = [];
         if(Auth::user()->role == 'head' && $request->get('pageType') !== 'my') {
             if($filterUser == 'all') {
                 $staffIds = User::where('parent_id', $userCurrentId)->pluck('id')->toArray();
@@ -167,12 +194,17 @@ class HomeController extends Controller
         } else {
             $userIds[] = $userCurrentId;
         }
+
+
+
         $userIds = array_unique($userIds);
         $tasks->whereIn('assigned_id', $userIds);
-        $tasks->orderBy('created_at', 'desc');
+        $tasks->orderBy($baseOrder, $baseOrderDir);
+        $tasks->orderBy('priority', 'desc');
         $tasks->paginate(30);
 
         return [
+            'order'=>$baseOrder,
             'tasks'=>$tasks->get(),
             'success'=>1,
         ];
@@ -191,7 +223,7 @@ class HomeController extends Controller
                 'message'=>'Задача не найдена'
             ];
         }
-        if($task->assigned_id != $user->id && $task->user_id != $user->id) {
+        if(!$task->checkEditStatus()) {
             return [
                 'success'=>0,
                 'message'=>'Нет доступа'
@@ -210,6 +242,58 @@ class HomeController extends Controller
             'success'=>true,
             'message'=>'Статус изменен',
             'task'=> $task
+        ];
+    }
+
+    /*
+     * Просмотр задачи на странице
+     * @param Request $request
+     */
+    public function vueTaskView(Request $request){
+        $user = Auth::user();
+
+        if(!$task = Task::where('id', $request->get('taskId'))->first()) {
+            return [
+                'success'=>0,
+                'message'=>'Задача не найдена'
+            ];
+        }
+        if(!$task->checkView()) {
+            return [
+                'success'=>0,
+                'message'=>'Нет доступа'
+            ];
+        }
+
+        return [
+            'success'=>true,
+            'task'=> $task
+        ];
+    }
+    /*
+     * Просмотр задачи на странице
+     * @param Request $request
+     */
+    public function vueTaskEditData(Request $request){
+        $user = Auth::user();
+
+        if(!$task = Task::where('id', $request->get('taskId'))->first()) {
+            return [
+                'success'=>0,
+                'message'=>'Задача не найдена'
+            ];
+        }
+        if(!$task->checkEditStatus()) {
+            return [
+                'success'=>0,
+                'message'=>'Нет доступа'
+            ];
+        }
+
+        return [
+            'success'=>true,
+            'task'=> $task,
+            'staffs'=> User::where('parent_id', Auth::user()->id)->get()
         ];
     }
 }

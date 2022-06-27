@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "buefy": "^0.9.21",
+        "moment": "^2.29.3",
         "nprogress": "^0.2.0",
         "vee-validate": "^3.4.10",
         "vue-meta": "^2.4.0",

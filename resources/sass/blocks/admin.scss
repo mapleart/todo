@@ -1,0 +1,18 @@
+.a-panel {
+    background: #FFFFFF;
+    box-shadow: 0px 7px 55px rgba(228, 235, 240, 0.75);
+    border-radius: 10px;
+    padding: 35px 28px 40px;
+
+    &__title {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 29px;
+        color: #000000;
+    }
+    &__subtitle {
+        font-size: 18px;
+        color: #8F989F;
+        margin-bottom: 30px;
+    }
+}
